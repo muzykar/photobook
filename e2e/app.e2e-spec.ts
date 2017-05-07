@@ -1,15 +1,14 @@
-import { browser, element, by } from 'protractor';
+import { PhotobookPage } from './app.po';
 
-describe('QuickStart E2E Tests', function () {
+describe('photobook App', () => {
+  let page: PhotobookPage;
 
-  let expectedMsg = 'Hello Angular';
-
-  beforeEach(function () {
-    browser.get('');
+  beforeEach(() => {
+    page = new PhotobookPage();
   });
 
-  it('should display: ' + expectedMsg, function () {
-    expect(element(by.css('h1')).getText()).toEqual(expectedMsg);
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
   });
-
 });
