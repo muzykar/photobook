@@ -1,0 +1,14 @@
+<h2>My Pictures</h2>
+<ul class="pictures">
+  <li *ngFor="let picture of pictures"
+    [class.selected]="picture === selectedPicture"
+    (click)="onSelect(picture)">
+    <img src="{{picture.url}}" style="height:100px"/>
+  </li>
+</ul>
+<div *ngIf="selectedPicture">
+  <h2>
+    {{selectedPicture.name | uppercase}} is my picture
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
