@@ -1,14 +1,63 @@
-<h2>My Pictures</h2>
-<ul class="pictures">
-  <li *ngFor="let picture of pictures"
-    [class.selected]="picture === selectedPicture"
-    (click)="onSelect(picture)">
-    <img src="{{picture.url}}" style="height:100px"/>
-  </li>
-</ul>
-<div *ngIf="selectedPicture">
-  <h2>
-    {{selectedPicture.name | uppercase}} is my picture
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
+<h4><p align="left">Add a new photos</p></h4>
+<form [formGroup]="myForm" (ngSubmit)="mySubmit(myForm.value)">
+
+    <input type="text" [formControl]="pictureName">
+    <input type="text" [formControl]="pictureUrl">
+
+    <select multiple formControlName="pictureTag" size="2">
+      <option *ngFor="let tag of tags" [value]="tag" type="number">
+        {{tag}}
+      </option>
+    </select>
+
+    <select formControlName="pictureRating">
+      <option *ngFor="let rating of ratings" [value]="rating">
+        {{rating}}
+      </option>
+    </select>
+
+    <div *ngIf="pictureName.hasError('required')">Picture name reqiured</div>
+    <div *ngIf="pictureName.hasError('minlength')">Picture name too short</div>
+    <div *ngIf="pictureUrl.hasError('required')">Picture url reqiured</div>
+    <!-- <div *ngIf="pictureTags.hasError('required')">Picture url reqiured</div> -->
+    <!-- <div *ngIf="pictureVotes.hasError('required')">Picture url reqiured</div> -->
+    <br>
+    <button type="submit">OK</button>
+
+</form>
+
+<h3><p align="left">All of my photos</p></h3>
+
+<div class="grid grid-pad">
+  <a *ngFor="let picture of pictures" [routerLink]="['/detail', picture.id]" class="col-0-9">
+  <!-- <a *ngFor="let picture of pictures" [routerLink]="['/detail', picture.id]" class="col-0-9"> -->
+    <div class="module picture">
+      <!-- <h4>{{picture.name}} -->
+      <img src="{{picture.url}}" style="height:100px"/>
+    <!-- </h4> -->
+    </div>
+  </a>
 </div>
+
+
+<!-- <br/>, <br><br/> or simply \n ? <br> -->
+
+
+<!-- <div *ngIf="selectedPicture">
+  <h3>
+    Selected picture is {{selectedPicture.name | uppercase}}
+    <br>
+    <button (click)="gotoDetail()"><i>View Details</i></button>
+  </h3>
+</div> -->
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="mySubmit(myForm.value)">
+
+    <input type="text" [formControl]="Name">
+    <div *ngIf="Name.hasError('required')">name reqiured</div>
+    <div *ngIf="firstName.hasError('minlength')">Firstname too short</div>
+    <br>
+    <button type="submit">OK</button>
+
+</form> -->

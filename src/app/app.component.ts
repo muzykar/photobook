@@ -4,11 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <h1>
-    {{title}}
+    <b>{{title   | uppercase}}</b>
   </h1>
   <nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/pictures" routerLinkActive="active">Pictures</a>
+    <a routerLink="/dashboard" routerLinkActive="active"><b>My favourites</b></a>
+    <a routerLink="/pictures" routerLinkActive="active"><b>All</b></a>
   </nav>
   <router-outlet></router-outlet>
   `,

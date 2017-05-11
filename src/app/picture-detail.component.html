@@ -1,9 +1,41 @@
 <div *ngIf="picture">
-  <h2>{{picture.name}} details!</h2>
-  <div>
-    <label>id: </label>{{picture.id}}</div>
-  <div>
-    <label>name: </label>{{picture.name}}</div>
-  <div>
-  <button (click)="goBack()">Back</button>
+  <h2>My photo: {{picture.name  | uppercase}}</h2>
+  <img src="{{picture.url}}" style="height:500px"/>
 </div>
+
+<form [formGroup]="detailForm" (ngSubmit)="myDelete()">
+    <!-- <input type="text" [formControl]="pictureName"> -->
+    <div>
+      <br>
+      <label><b>name</b>: </label>
+      <input type="text" placeholder="new picture name" [formControl]="pictureName">
+    </div>
+    <div>
+      <label><b>tags</b>: </label>
+      <input type="text" placeholder="new tags" [formControl]="pictureTag">
+      <select multiple formControlName="pictureTag" size="1">
+        <option *ngFor="let tag of tags" [value]="tag" type="string">
+          {{tag}}
+        </option>
+      </select>
+    </div>
+    <div *ngIf="picture">
+      <label><b>origin</b>: </label>
+      <i>{{picture.url}}</i>
+    </div>
+    <div>
+      <label><b>rating</b>: </label>
+      <!-- <input type="number" placeholder="new picture rating" [formControl]="pictureRating"> -->
+      <select formControlName="pictureRating">
+        <option *ngFor="let rating of ratings" [value]="rating">
+          {{rating}}
+        </option>
+      </select>
+    </div>
+
+    <br>
+    <button (click)="myEdit(detailForm.value)" type="button">Edit details</button>
+    <button  type="submit">Delete photo</button>
+</form>
+<br>
+<button (click)="goBack()">Back</button>
