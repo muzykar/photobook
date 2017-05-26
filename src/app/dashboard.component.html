@@ -1,6 +1,6 @@
-<h3><p align="left">My best photos!</p></h3>
+<h2><p align="center">My best photos!</p></h2>
 <div class="grid grid-pad">
-  <a *ngFor="let picture of pictures" [routerLink]="['/detail', picture.id]" class="col-0-9">
+  <a *ngFor="let picture of pictures" [routerLink]="['/detail', picture.id]" >
   <!-- <a *ngFor="let picture of pictures" [routerLink]="['/detail', picture.id]" class="col-0-9"> -->
     <div class="module picture">
       <!-- <h4>{{picture.name}} -->

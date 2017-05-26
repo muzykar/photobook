@@ -6,7 +6,6 @@ import { PICTURES } from './mock-pictures';
 
 @Component({
   selector: 'my-dashboard',
-  template: '<h3>My Dashboard</h3>',
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
@@ -25,7 +24,7 @@ export class DashboardComponent implements OnInit {
     }
     return best;
   }
-  
+
   // getPicture(id: number): Picture {
   //   for (let picture of PICTURES) {
   //     if (picture.id == id) {

@@ -13,22 +13,3 @@ export var PICTURES: Picture[] = [
   { id: 9, name: 'Koala', tags: ['nature', 'animal'], url: 'https://dubn.files.wordpress.com/2015/03/tapety-zwierzeta-swiata-natura-761.jpg', rating: 5 },
   { id: 10, name: 'Childhood', tags: ['nature', 'people', 'animal'], url: 'http://antyblanty.pl/wp-content/uploads/2016/06/DSC5326a-5749deb39b1de__880-500x298.jpg', rating: 3}
 ];
-
-
-
-/*
-  { id: 11, name: 'Mr. Nice', tag: 'people', url: 'http' },
-  { id: 12, name: 'Narco', tag: 'people', url: 'http' },
-  { id: 13, name: 'Bombasto', tag: 'landscape', url: 'http' },
-  { id: 14, name: 'Celeritas', tag: 'people', url: 'http' },
-  { id: 15, name: 'Magneta', tag: 'landscape', url: 'http' },
-  { id: 16, name: 'RubberMan', tag: 'animals', url: 'http' },
-  { id: 17, name: 'Dynama', tag: 'people', url: 'http' },
-  { id: 18, name: 'Dr IQ', tag: 'people', url: 'http' },
-  { id: 19, name: 'Magma', tag: 'landscape', url: 'http' },
-  { id: 20, name: 'Tornado', tag: 'animals', url: 'http' }
-];
-
-/*
-
-*/
