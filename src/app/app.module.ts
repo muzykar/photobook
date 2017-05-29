@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { PictureDetailComponent } from './picture-detail.component';
-import { PicturesComponent } from './pictures.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PictureDetailComponent } from './picture-detail/picture-detail.component';
+import { PicturesComponent } from './pictures/pictures.component';
 import { PictureService } from './picture.service';
 
 import { AppRoutingModule } from './app-routing.module';

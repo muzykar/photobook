@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard.component';
-import { PictureDetailComponent } from './picture-detail.component';
-import { PicturesComponent } from './pictures.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PictureDetailComponent } from './picture-detail/picture-detail.component';
+import { PicturesComponent } from './pictures/pictures.component';
 
 const routes: Routes = [
   { path: 'pictures', component: PicturesComponent },

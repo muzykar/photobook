@@ -10,6 +10,7 @@
       <label><b>name</b>: </label>
       <input type="text" placeholder="new picture name" [formControl]="pictureName">
     </div>
+
     <div>
       <label><b>tags</b>: </label>
       <input type="text" placeholder="new tags" [formControl]="pictureTag">
@@ -19,10 +20,12 @@
         </option>
       </select>
     </div>
+
     <div *ngIf="picture">
       <label><b>origin</b>: </label>
       <i>{{picture.url}}</i>
     </div>
+
     <div>
       <label><b>rating</b>: </label>
       <!-- <input type="number" placeholder="new picture rating" [formControl]="pictureRating"> -->

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Picture } from './picture';
-import { PictureService } from './picture.service';
-import { PICTURES } from './mock-pictures';
+import { Picture } from './../picture';
+import { PictureService } from './../picture.service';
+import { PICTURES } from './../mock-pictures';
 
 @Component({
   selector: 'my-dashboard',

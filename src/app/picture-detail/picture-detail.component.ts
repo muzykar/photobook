@@ -4,8 +4,8 @@ import { Location } from '@angular/common';
 
 import { FormControl, FormGroup, FormBuilder, AbstractControl, Validators } from '@angular/forms';
 
-import { Picture } from './picture';
-import { PictureService } from './picture.service';
+import { Picture } from './../picture';
+import { PictureService } from './../picture.service';
 
 import 'rxjs/add/operator/switchMap';
 

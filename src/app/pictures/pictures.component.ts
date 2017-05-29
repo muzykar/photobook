@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 
 import { FormControl, FormGroup, FormBuilder, AbstractControl, Validators } from '@angular/forms';
 
-import { Picture } from './picture';
-import { PictureService } from './picture.service';
+import { Picture } from './../picture';
+import { PictureService } from './../picture.service';
 
 @Component({
   selector: 'my-pictures',

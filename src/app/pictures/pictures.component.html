@@ -2,6 +2,7 @@
 <form [formGroup]="myForm" (ngSubmit)="mySubmit(myForm.value)">
 
     <input type="text" [formControl]="pictureName">
+    
     <input type="text" [formControl]="pictureUrl">
 
     <select multiple formControlName="pictureTag" size="2">

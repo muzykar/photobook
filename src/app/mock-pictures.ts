@@ -1,7 +1,6 @@
 import { Picture } from './picture';
 
 export var PICTURES: Picture[] = [
-  // new Picture('Mr. Nice', ['people', 'animal'], 'https://saltmarshrunning.com/wp-content/uploads/2014/09/bananasf.jpg', [3, 5, 1])
   { id: 1, name: 'Dog', tags: ['people', 'animal'], url: 'http://www.ifaw.org/sites/default/files/11_18_15_happiness.jpg', rating: 1 },
   { id: 2, name: 'Owlet', tags: ['nature', 'animal'], url: 'http://www.ourendangeredworld.com/wp-content/uploads/2013/10/Forest-Owlet-700x350.jpg', rating: 2 },
   { id: 3, name: 'Men', tags: ['people'], url: 'https://s-media-cache-ak0.pinimg.com/736x/5f/1e/b9/5f1eb9e7df762aca5c23a5e34e1ce942.jpg', rating: 5 },
